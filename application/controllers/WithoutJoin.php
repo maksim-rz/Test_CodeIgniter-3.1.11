@@ -57,16 +57,16 @@ class WithoutJoin extends CI_Controller
 	}
 
 
-	/*public function index2 ()
+	/*public function index ()
 	{
 		$data = [];
 		$data['title'] = "getDataWithoutJoin";
 
-		$data['requests2'] = $this->requests_model->getRequests();
+		$data['requests'] = $this->requests_model->getRequests();
 		$buyers = $this->buyers_model->getBuyers();
 		$requestsInfo = $this->requestsInfo_model->getRequestsInfo();
 
-		foreach ($data['requests2'] as $key => $req)
+		foreach ($data['requests'] as $key => $req)
 		{
 			if (!empty($req['buyer_id']))
 			{
@@ -76,7 +76,7 @@ class WithoutJoin extends CI_Controller
 					{
 						continue;
 					}
-					$data['requests2'][$key]['buyer'] = $buyer;
+					$data['requests'][$key]['buyer'] = $buyer;
 					break;
 				}
 			}
@@ -89,7 +89,7 @@ class WithoutJoin extends CI_Controller
 					{
 						continue;
 					}
-					$data['requests2'][$key]['request'] = $reqInfo;
+					$data['requests'][$key]['request'] = $reqInfo;
 					break;
 				}
 			}
